@@ -99,3 +99,32 @@ address strong{color:var(--ink)}address a{text-decoration:none;color:var(--deep)
 .copy{text-align:center;border-top:1px solid var(--line);margin:48px 0 0;padding:20px;max-width:none;font-size:.85rem}
 .wpp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;z-index:90;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .35s var(--ease)}
 .wpp:hover{transform:scale(1.08)}
+
+/* ===== Antes e depois ===== */
+.ba__tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.ba__tab{font:inherit;font-weight:600;font-size:.95rem;padding:10px 22px;border-radius:999px;border:1.5px solid var(--teal);background:transparent;color:var(--deep);cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease)}
+[data-theme=dark] .ba__tab{color:#fff}
+.ba__tab:hover{transform:translateY(-1px)}
+.ba__tab[aria-selected=true]{background:var(--teal);color:#fff}
+.ba__cmp{position:relative;width:min(100%,820px);aspect-ratio:16/10;border-radius:12px;overflow:hidden;background:var(--light);user-select:none;touch-action:pan-y}
+.ba__img{position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px}
+.ba__img span{background:rgba(8,60,70,.72);color:#fff;font-weight:600;font-size:.85rem;padding:6px 14px;border-radius:999px;letter-spacing:.03em}
+.ba__img--after{background:linear-gradient(135deg,#bfe9ee,#7fd0da);justify-content:flex-end}
+.ba__img--before{background:linear-gradient(135deg,#d9d4cb,#b9b0a2);clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba__handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.25);pointer-events:none}
+.ba__handle::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/24px no-repeat;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.ba__range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.ba__cmp:focus-within .ba__handle::after{outline:2px solid var(--deep);outline-offset:3px}
+.ba__note{margin-top:14px;font-size:.92rem;opacity:.8}
+
+/* ===== Marca nova ===== */
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.brand img.brand__mark{width:46px;height:auto;transition:width .4s var(--ease),transform .8s var(--ease)}
+.is-scrolled .brand img.brand__mark{width:38px}
+.brand:hover .brand__mark{transform:rotate(90deg)}
+.brand__name{font-size:1.45rem;font-weight:300;letter-spacing:-.02em;color:var(--deep);line-height:1}
+.brand__name b{font-weight:600}
+[data-theme=dark] .brand__name{color:#fff}
+.about__logo{width:min(260px,70%);height:auto;margin:8px 0 24px}
+.clover{height:auto}
+.footer img{height:auto}
