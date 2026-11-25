@@ -11,7 +11,7 @@
 <meta property="og:description" content="Seu sorriso merece cuidado em cada detalhe. Agende sua avaliação.">
 <meta property="og:image" content="assets/logo.svg">
 <meta property="og:locale" content="pt_BR">
-<link rel="icon" href="assets/logo.svg">
+<link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,9 +26,9 @@
 
 <header class="header" id="header">
   <div class="wrap header__in">
-    <a href="#inicio" class="brand" aria-label="SorrisOdonto – início"><img src="assets/logo.svg" alt="SorrisOdonto – Reabilitação Oral" width="180" height="auto"></a>
+    <a href="#inicio" class="brand" aria-label="SorrisOdonto – início"><img class="brand__mark" src="assets/simbolo.svg" alt="" width="48" height="46"><span class="brand__name">Sorris<b>Odonto</b></span></a>
     <nav class="nav" id="nav" aria-label="Principal">
-      <a href="#inicio">Início</a><a href="#clinica">A Clínica</a><a href="#tratamentos">Tratamentos</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a>
+      <a href="#inicio">Início</a><a href="#clinica">A Clínica</a><a href="#tratamentos">Tratamentos</a><a href="#antes-depois">Antes e depois</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a>
       <a href="https://wa.me/5581989399356" class="btn btn--sm nav__cta" target="_blank" rel="noopener">Agendar consulta</a>
     </nav>
     <button class="icon-btn" id="themeBtn" aria-label="Alternar tema claro/escuro" type="button">
@@ -41,7 +41,7 @@
 
 <main id="conteudo">
 <section class="hero" id="inicio">
-  <svg class="clover" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M100 100C60 100 40 70 55 45s45-5 45 55z"/><path d="M100 100C100 60 130 40 155 55s5 45-55 45z"/><path d="M100 100c40 0 60 30 45 55s-45 5-45-55z"/><path d="M100 100c0 40-30 60-55 45s-5-45 55-45z"/></g></svg>
+  <img class="clover" src="assets/simbolo.svg" alt="" aria-hidden="true">
   <div class="wrap hero__in">
     <div class="hero__text">
       <p class="tag" data-hero>SorrisOdonto | Gravatá - PE</p>
@@ -54,7 +54,7 @@
     </div>
     <figure class="hero__img reveal-img">
       <!-- Substitua por foto real: assets/images/hero.jpg -->
-      <img src="assets/images/hero.svg" alt="Paciente sorrindo em atendimento odontológico (imagem ilustrativa)" data-parallax="0.06">
+      <img src="assets/images/hero.svg" alt="Profissional da SorrisOdonto segurando um alinhador ortodôntico" data-parallax="0.06">
       <span class="hero__bar" aria-hidden="true"></span>
     </figure>
   </div>
@@ -63,13 +63,14 @@
 <section class="sec sec--alt" id="clinica">
   <div class="wrap about">
     <div class="about__imgs">
-      <figure class="reveal-img"><img src="assets/images/clinica-1.svg" alt="Ambiente da clínica (imagem ilustrativa)" loading="lazy" data-parallax="0.05"></figure>
-      <figure class="reveal-img"><img src="assets/images/clinica-2.svg" alt="Detalhe da estrutura da clínica (imagem ilustrativa)" loading="lazy"></figure>
+      <figure class="reveal-img"><img src="assets/images/clinica-1.svg" alt="Profissional da equipe SorrisOdonto" loading="lazy" data-parallax="0.05"></figure>
+      <figure class="reveal-img"><img src="assets/images/clinica-2.svg" alt="Arte da campanha SorrisOdonto na sua casa" loading="lazy"></figure>
     </div>
     <div class="about__text" data-stagger>
       <h2>Um novo olhar para a sua saúde bucal.</h2>
       <p>A SorrisOdonto é uma clínica odontológica localizada em Gravatá, dedicada à reabilitação oral e ao cuidado com cada sorriso.</p>
       <p class="muted">Nosso propósito está na assinatura da marca: <em>Seu Sorriso, Nossa Missão.</em></p>
+      <img class="about__logo" src="assets/logo.svg" alt="SorrisOdonto – Reabilitação Oral. Seu sorriso, nossa missão." loading="lazy" width="260">
       <a href="#contato" class="link">Fale com a clínica</a>
     </div>
   </div>
@@ -79,28 +80,71 @@
   <div class="wrap">
     <div class="head" data-stagger>
       <h2>Tratamentos</h2>
-      <p class="muted">Cuidados para cada etapa da sua saúde bucal. A lista oficial será confirmada com a clínica.</p>
+      <p class="muted">Cuidados para cada etapa da sua saúde bucal. Os tratamentos abaixo foram tirados do perfil da clínica no Instagram e serão confirmados com a equipe.</p>
     </div>
     <!-- Para cadastrar um tratamento: duplique um <article class="treat"> e edite imagem, nome, descrição e link. -->
     <div class="treats" data-stagger>
       <article class="treat">
-        <figure class="reveal-img"><img src="assets/images/tratamento-1.svg" alt="Ilustração do tratamento" loading="lazy"></figure>
-        <h3>Nome do tratamento</h3>
+        <figure class="reveal-img"><img src="assets/images/tratamento-1.svg" alt="Alinhador ortodôntico, em atendimento na SorrisOdonto" loading="lazy"></figure>
+        <h3>Alinhadores ortodônticos</h3>
         <p>Descrição breve a ser confirmada pela clínica.</p>
         <a class="link" href="https://wa.me/5581989399356?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20tratamentos" target="_blank" rel="noopener">Solicitar informações</a>
       </article>
       <article class="treat">
-        <figure class="reveal-img"><img src="assets/images/tratamento-2.svg" alt="Ilustração do tratamento" loading="lazy"></figure>
-        <h3>Nome do tratamento</h3>
+        <figure class="reveal-img"><img src="assets/images/tratamento-2.svg" alt="Profissional da SorrisOdonto falando sobre implantes dentários" loading="lazy"></figure>
+        <h3>Implantes dentários</h3>
         <p>Descrição breve a ser confirmada pela clínica.</p>
         <a class="link" href="https://wa.me/5581989399356?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20tratamentos" target="_blank" rel="noopener">Solicitar informações</a>
       </article>
       <article class="treat">
-        <figure class="reveal-img"><img src="assets/images/tratamento-3.svg" alt="Ilustração do tratamento" loading="lazy"></figure>
-        <h3>Nome do tratamento</h3>
+        <figure class="reveal-img"><img src="assets/images/tratamento-3.svg" alt="Profissional da SorrisOdonto com modelo de prótese" loading="lazy"></figure>
+        <h3>Prótese fixa</h3>
         <p>Descrição breve a ser confirmada pela clínica.</p>
         <a class="link" href="https://wa.me/5581989399356?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20tratamentos" target="_blank" rel="noopener">Solicitar informações</a>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="antes-depois">
+  <div class="wrap">
+    <div class="head" data-stagger>
+      <h2>Antes e depois</h2>
+      <p class="muted">Arraste a barra para comparar. Escolha o tipo de tratamento nas abas.</p>
+    </div>
+    <div class="ba" data-tabs>
+      <div class="ba__tabs" role="tablist" aria-label="Tipo de tratamento">
+        <button class="ba__tab" role="tab" type="button" id="ba-t0" aria-controls="ba-p0" aria-selected="true">Clareamento</button>
+        <button class="ba__tab" role="tab" type="button" id="ba-t1" aria-controls="ba-p1" aria-selected="false">Alinhadores</button>
+        <button class="ba__tab" role="tab" type="button" id="ba-t2" aria-controls="ba-p2" aria-selected="false">Prótese e implantes</button>
+      </div>
+      <div class="ba__panel" role="tabpanel" id="ba-p0" aria-labelledby="ba-t0">
+        <div class="ba__cmp" style="--pos:50%" data-ba>
+          <div class="ba__img ba__img--after" aria-hidden="true"><span>Depois</span></div>
+          <div class="ba__img ba__img--before" aria-hidden="true"><span>Antes</span></div>
+          <div class="ba__handle" aria-hidden="true"></div>
+          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois: clareamento">
+        </div>
+        <p class="ba__note">Espaço reservado para fotos reais de clareamento. Publicar só com autorização do paciente.</p>
+      </div>
+      <div class="ba__panel" role="tabpanel" id="ba-p1" aria-labelledby="ba-t1" hidden>
+        <div class="ba__cmp" style="--pos:50%" data-ba>
+          <div class="ba__img ba__img--after" aria-hidden="true"><span>Depois</span></div>
+          <div class="ba__img ba__img--before" aria-hidden="true"><span>Antes</span></div>
+          <div class="ba__handle" aria-hidden="true"></div>
+          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois: alinhadores">
+        </div>
+        <p class="ba__note">Espaço reservado para fotos reais de alinhadores. Publicar só com autorização do paciente.</p>
+      </div>
+      <div class="ba__panel" role="tabpanel" id="ba-p2" aria-labelledby="ba-t2" hidden>
+        <div class="ba__cmp" style="--pos:50%" data-ba>
+          <div class="ba__img ba__img--after" aria-hidden="true"><span>Depois</span></div>
+          <div class="ba__img ba__img--before" aria-hidden="true"><span>Antes</span></div>
+          <div class="ba__handle" aria-hidden="true"></div>
+          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois: prótese e implantes">
+        </div>
+        <p class="ba__note">Espaço reservado para fotos reais de prótese e implantes. Publicar só com autorização do paciente.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -165,10 +209,10 @@
 
 <footer class="footer">
   <div class="wrap footer__in">
-    <div><img src="assets/logo.svg" alt="SorrisOdonto" width="150" height="auto"><p>SorrisOdonto – Reabilitação Oral</p></div>
-    <nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#clinica">A Clínica</a><a href="#tratamentos">Tratamentos</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a></nav>
+    <div><img src="assets/logo.svg" alt="SorrisOdonto" width="170" height="auto"><p>SorrisOdonto – Reabilitação Oral</p></div>
+    <nav aria-label="Rodapé"><a href="#inicio">Início</a><a href="#clinica">A Clínica</a><a href="#tratamentos">Tratamentos</a><a href="#antes-depois">Antes e depois</a><a href="#diferenciais">Diferenciais</a><a href="#contato">Contato</a></nav>
     <div><p>Rua Dr. Amaury de Medeiros, 104 – Boa Vista<br>Gravatá – PE</p><p>(81) 98939-9356 · (81) 3533-6644</p>
-    <!-- <a href="URL-DO-INSTAGRAM">Instagram</a> — adicionar quando o perfil oficial for informado -->
+    <p><a href="https://www.instagram.com/sorrisodonto/" target="_blank" rel="noopener">Instagram @sorrisodonto</a></p>
     </div>
   </div>
   <p class="copy">© <span id="year">2026</span> SorrisOdonto – Reabilitação Oral. Todos os direitos reservados.</p>
