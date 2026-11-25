@@ -16,7 +16,15 @@
     e.target.querySelectorAll('[data-count]').forEach(count);
     io.unobserve(e.target);
   })},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('[data-stagger],.reveal-img:not(.hero__img)').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('[data-stagger]').forEach(function(el){io.observe(el)});
+  /* figuras recortadas por clip-path nunca intersectam: observa o elemento pai e revela a figura */
+  var io2=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    e.target.__fig.classList.add('in');io2.unobserve(e.target);
+  })},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal-img:not(.hero__img)').forEach(function(f){
+    var host=f.parentElement;host.__fig=f;io2.observe(host);
+  });
   if(reduce)return;
   var items=[].slice.call(document.querySelectorAll('[data-parallax]')),ticking=false;
   function update(){items.forEach(function(img){
