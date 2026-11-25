@@ -20,3 +20,29 @@
   .js [data-hero],.js [data-stagger]>*{opacity:1;transform:none}
   .js .reveal-img,.js .reveal-img.in{clip-path:none}
 }
+
+/* ===== Animações extras ===== */
+@keyframes brandIn{from{opacity:0;transform:translateY(-10px) rotate(-90deg) scale(.7)}to{opacity:1;transform:none}}
+@keyframes nameIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes shine{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(220%) skewX(-20deg)}}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+@keyframes handleHint{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+.js .brand__mark{animation:brandIn 1s var(--ease) both}
+.js .brand__name{animation:nameIn .9s .35s var(--ease) both}
+.hero__img{animation:floaty 7s ease-in-out 1.6s infinite}
+.btn{position:relative;overflow:hidden}
+.btn:not(.btn--ghost)::after{content:"";position:absolute;inset:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-120%) skewX(-20deg);animation:shine 5s 2.5s ease-in-out infinite;pointer-events:none}
+.js .about__logo{opacity:0;transform:scale(.88) translateY(14px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .about__text.in .about__logo{opacity:1;transform:none}
+.js .ba__tab{transition:background .3s,color .3s,transform .3s var(--ease)}
+.ba__panel:not([hidden]){animation:panelIn .6s var(--ease) both}
+@keyframes panelIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.ba__cmp.hint .ba__handle::after{animation:handleHint 1.2s ease-in-out 2}
+.treat{transition:transform .5s var(--ease)}
+.treat:hover{transform:translateY(-6px)}
+a[href*="wa.me"].btn--light{animation:none}
+@media (prefers-reduced-motion:reduce){
+  .hero__img,.btn::after,.js .brand__mark,.js .brand__name,.ba__panel,.ba__cmp.hint .ba__handle::after{animation:none!important}
+  .js .about__logo{opacity:1;transform:none}
+}
