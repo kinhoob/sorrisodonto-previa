@@ -1,0 +1,22 @@
+/* ===== Animações (ativadas por JS: html.js) ===== */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+.clover{animation:spin 120s linear infinite}
+.hero__bar{animation:float 7s ease-in-out infinite}
+.wpp{animation:pulse 2.8s infinite}
+.theme-fade,.theme-fade *{transition:background-color .5s,color .5s,border-color .5s!important}
+.js [data-hero]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .hero-in [data-hero]{opacity:1;transform:none}
+.js .hero-in [data-hero]:nth-child(2){transition-delay:.12s}.js .hero-in [data-hero]:nth-child(3){transition-delay:.26s}.js .hero-in [data-hero]:nth-child(4){transition-delay:.4s}
+.js [data-stagger]>*{opacity:0;transform:translateY(32px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0)*110ms)}
+.js [data-stagger].in>*{opacity:1;transform:none}
+.js .reveal-img{clip-path:inset(0 0 100% 0);transition:clip-path 1.2s var(--ease)}
+.js .reveal-img.in{clip-path:inset(0 0 0 0)}
+.js .hero__img.reveal-img{clip-path:inset(0 0 0 100%)}
+.js .hero__img.reveal-img.in{clip-path:inset(0 -30px 0 -30px)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js [data-hero],.js [data-stagger]>*{opacity:1;transform:none}
+  .js .reveal-img,.js .reveal-img.in{clip-path:none}
+}
